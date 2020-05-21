@@ -11,6 +11,8 @@ const obs$ = new Observable<String>(subs => {
     subs.next('mundo');
 
     // No va a emitir nada mas
+    // Quiere decir que ya no mandara mas eventos al subscribe que estaba atentos a las respuestas de este observable!
+    // Inclusive puedan llegar mas cosas este no los tomara en cuenta ya que termino no hago mas sigue con tu vida sin mi!
     subs.complete();
     // Esto jamas se ejecutara
     subs.next('holi')
